@@ -16,3 +16,17 @@ age:{$[
 // 3. Check if a date is a weekday or weekend
 
 date:{$[x mod 7;"Weekday";"Weekend"]}
+
+// 4. Determine eligibility based on age and income
+
+eligibility:{$[(x>=50000) = y>=18;"Eligible to get loan";"Not eligible to get loan"]}
+
+// 5. Function to categorize temperature based on range
+
+temperature:{$[
+    x < 0;"Freezing";
+    x < 10;"Cold";
+    x < 20;"Cool";
+    x < 30;"warm";
+    "Hot"
+ ]}
